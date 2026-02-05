@@ -4,19 +4,19 @@ body{
 }
 
 #main{
-    width: 950px;
+    width: 1450px;
     margin: auto auto;
 }
 
 #content{
     float: left;
     width:430px;
-    margin-left: 520px;
+    margin-left: 1020px;
     padding-left:10px;
     background: #93B9FF;
     border-style: solid;
     border-color: #93B9FF;
-    height: 560px; /* I hate CSS */
+    height: 1060px; /* I hate CSS */
 }
 
 #htmlsnippet {
@@ -47,9 +47,9 @@ body{
 
 #left{
     float: left;
-    width: 520px;
-    margin-left: -956px;
-    height: 560px;
+    width: 1020px;
+    margin-left: -1456px;
+    height: 1060px;
     background: #5370C0;
     border-style: solid;
     border-color: #5370C0;
