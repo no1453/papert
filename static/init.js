@@ -25,11 +25,11 @@ function init(canvas_id, turtle_id, form_id, oldcode_id, textoutput_id) {
     sprite = document.getElementById(turtle_id);
 
     // I hate opera, I hate firefox.
-    canvas.style.width = 500;
-    canvas.width = 500;
-    
-    canvas.style.height = 500;
-    canvas.height = 500;
+    canvas.style.width = 1000;
+    canvas.width = 1000;
+
+    canvas.style.height = 1000;
+    canvas.height = 1000;
     
     oldcode = document.getElementById(oldcode_id);
     setup();
@@ -65,6 +65,6 @@ function stop() {
 function clearcanvas() {
     var ctx = canvas.getContext('2d');
     ctx.fillStyle = "rgb(255,255,255)";
-    ctx.fillRect(0, 0, 500, 500);
+    ctx.fillRect(0, 0, 1000, 1000);
     textOutput.innerHTML = "";
 }
