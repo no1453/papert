@@ -64,7 +64,16 @@ function stop() {
 
 function clearcanvas() {
     var ctx = canvas.getContext('2d');
-    ctx.fillStyle = "rgb(255,255,255)";
-    ctx.fillRect(0, 0, 1000, 1000);
+    ctx.clearRect(0, 0, 1000, 1000);
     textOutput.innerHTML = "";
+}
+
+function savecanvas() {
+    var timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+    var filename = 'papert-' + timestamp + '.png';
+
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = canvas.toDataURL();
+    link.click();
 }
