@@ -230,10 +230,7 @@ Turtle.prototype.clean = function() {
     this.clean_;
 }
 Turtle.prototype.clean_ = function() {
-    old = this.c.fillStyle
-    this.c.fillStyle = "rgb(255,255,255)";
-    this.c.fillRect(0,0,this.max_x,this.max_y);
-    this.c.fillStyle = old;
+    this.c.clearRect(0,0,this.max_x,this.max_y);
 }
 
 Turtle.prototype.clearscreen = function() {
