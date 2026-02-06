@@ -1,0 +1,18 @@
+to dr :lev :len
+  make "len :len / sqrt 2
+  if :lev > 0 [rt 45 dr :lev - 1 :len lt 90 dl :lev - 1 :len rt 45]
+  if :lev = 0 [rt 45 fd :len lt 90 fd :len rt 45]
+end
+ 
+to dl :lev :len
+  make "len :len / sqrt 2
+  if :lev > 0 [lt 45 dr :lev - 1 :len rt 90 dl :lev - 1 :len lt 45]
+  if :lev = 0 [lt 45 fd :len rt 90 fd :len lt 45]
+end
+
+reset
+pu
+back 375
+pd
+color [ 0 0 0 ]
+dl 15 650
