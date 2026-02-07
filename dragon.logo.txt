@@ -10,9 +10,38 @@ to dl :lev :len
   if :lev = 0 [lt 45 fd :len rt 90 fd :len lt 45]
 end
 
+to gocolor :c
+  color ITEM :c [
+    [ 255 255   0 ]
+    [ 255   0   0 ]
+    [   0 255   0 ]
+    [   0   0 255 ]
+    [ 255   0 255 ]
+    [   0 255 255 ]
+    [ 255 165   0 ]
+    [ 128   0 128 ]
+    [ 255 192 203 ]
+    [  34 139  34 ]
+    [ 255 215   0 ]
+    [ 220  20  60 ]
+    [   0 191 255 ]
+    [ 255  69   0 ]
+    [ 148   0 211 ]   
+    [  50 205  50 ]
+    [  75   0 130 ] 
+    [   0   0   0 ]
+  ]
+end
+
 reset
-pu
-back 375
-pd
-color [ 0 0 0 ]
-dl 15 650
+make "n 0
+
+repeat 18 [
+  gocolor :n
+  home
+  pu
+  back 375
+  pd 
+  dl :n 650
+  make "n :n + 1
+]
